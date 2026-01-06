@@ -1,0 +1,79 @@
+.my-skills{
+    height: 100vh;
+   
+    background: linear-gradient(90deg, #ABD1AF, #87B3B4, #8ABCBD, #ce99c1);
+}
+.my-skills-container {
+  max-width: 800px;
+  margin-top: 5%;
+  margin-left: 25%;
+  padding: 40px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+.my-skills-container h1{
+    margin-left: 29%;
+    margin-bottom: 1rem;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.tag.share {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.tag.learn {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.remove-btn {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555555;
+}
+
+.skill-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-input input,
+.skill-input select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.swap-btn {
+  background-color: #2d6a6b;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.add-btn{
+     background-color: #2d6a6b;
+     color: #fff;
+     border-radius: 10px;
+}

@@ -1,0 +1,110 @@
+/* Page background */
+.edit-profile-container {
+  min-height: 100vh;
+  background: linear-gradient(90deg, #ABD1AF, #87B3B4, #8ABCBD, #CE99C1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Card */
+.edit-profile-card {
+  background: #ffffff;
+  width: 60%;
+  max-width: 800px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  padding: 40px 45px;
+}
+
+/* Heading */
+.edit-profile-card h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Labels */
+.edit-profile-card label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+/* Inputs & textarea */
+.edit-profile-card input,
+.edit-profile-card textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-profile-card textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Focus effect */
+.edit-profile-card input:focus,
+.edit-profile-card textarea:focus {
+  border-color: #8abcbd;
+  box-shadow: 0 0 0 2px rgba(138, 188, 189, 0.3);
+}
+
+/* Buttons container */
+.edit-profile-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* Save button */
+.edit-profile-buttons button:first-child {
+  background-color: #8abcbd;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-profile-buttons button:first-child:hover {
+  background-color: #6ea4a6;
+}
+
+/* Cancel button */
+.edit-profile-buttons button:last-child {
+  background-color: transparent;
+  color: #8abcbd;
+  padding: 10px 20px;
+  border: 1px solid #8abcbd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-profile-buttons button:last-child:hover {
+  background-color: #8abcbd;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-profile-card {
+    width: 100%;
+    padding: 30px 25px;
+  }
+}

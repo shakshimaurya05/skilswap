@@ -1,0 +1,161 @@
+/* Full page gradient background */
+.profile-page-container {
+  min-height: 100vh;
+ 
+ background: linear-gradient(90deg, #ABD1AF, #87B3B4, #8ABCBD, #ce99c1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+.profile-card {
+    position: relative;
+  background: #ffffff;
+  max-width: 95%;
+  width: 1000px;
+ min-height: 520px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  padding: 45px;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.profile-header {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-header h1 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.user-role {
+  color: #777;
+  font-size: 14px;
+}
+
+.profile-content {
+  width: 65%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    box-sizing: border-box;
+}
+
+.profile-section {
+   
+  margin-bottom: 4px;
+}
+.profile-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+
+.profile-section h3 {
+  font-size: 15px;
+
+  color: #333;
+}
+
+.profile-section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.skill-tags {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.tag.share {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.tag.learn {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+
+.profile-footer {
+    width: 100%;
+    position: absolute;
+  margin-top: 400px;
+display: flex;
+flex-direction: row;
+gap: 1rem;
+margin-left: 650px;
+  bottom: 30px;
+  
+  
+}
+
+.profile-footer .swap-btn {
+  background-color: #40455d; 
+  color: #fff;
+  padding: 6px 13px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+
+.profile-footer .swap-btn:hover {
+  background-color: #6fa6a0;
+}
+
+.profile-footer .edit-btn {
+  background-color: #40455d;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  
+}
+
+.profile-footer .edit-btn:hover {
+  background-color: #6fa6a0;
+}
+

@@ -1,0 +1,23 @@
+
+.navbar{
+       background-color: rgba(255, 255, 255, 0.15) !important;
+       backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+.skillswap{
+      margin-left: 7rem;
+}
+
+.join{
+       margin-right: 7rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
