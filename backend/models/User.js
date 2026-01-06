@@ -60,7 +60,10 @@ const userSchema = new Schema({
         default:
             'https://cdn-icons-png.flaticon.com/512/3135/3135715.png', // default avatar
     },
-
+      profileCompleted: {
+        type: Boolean,
+        default: false,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
