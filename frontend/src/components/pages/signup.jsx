@@ -4,6 +4,7 @@ import axios from "axios";
 import { handleError, handleSuccess } from "../../utils";
 import { ToastContainer,} from 'react-toastify';
 import "./signup.css";
+import API_URL from "../../config/api";
 function Signup() {
   const navigate = useNavigate();
   const [signupInfo, setSignupInfo] = useState({
@@ -26,7 +27,7 @@ function Signup() {
       return handleError("name, email and password are required");
     }
     try {
-      const { data } = await axios.post("http://localhost:8080/auth/signup", signupInfo);
+      const { data } = await axios.post(`${API_URL}/auth/signup`, signupInfo);
       const { success, message, error } = data;
       if (success) {
         handleSuccess(message);

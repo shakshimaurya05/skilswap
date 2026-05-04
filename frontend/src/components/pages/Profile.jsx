@@ -3,6 +3,7 @@ import './profile.css';
 import { useNavigate } from "react-router-dom";
 import Header from "../home/Header";
 import { motion } from "framer-motion";
+import API_URL from "../../config/api";
 const Profile = () => {
 const [userData, setUserData] = useState(null);
 const navigate = useNavigate();
@@ -11,7 +12,7 @@ const navigate = useNavigate();
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem("token"); 
-      const res = await fetch("http://localhost:8080/profile/profile", {
+      const res = await fetch(`${API_URL}/profile/profile`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

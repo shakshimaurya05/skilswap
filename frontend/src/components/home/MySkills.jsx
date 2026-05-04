@@ -3,6 +3,7 @@ import "./myskills.css";
 import Header from "./Header";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import API_URL from "../../config/api";
 const MySkills = () => {
   const [skillsToTeach, setSkillsToTeach] = useState([]);
   const [skillsToLearn, setSkillsToLearn] = useState([]);
@@ -15,7 +16,7 @@ const MySkills = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:8080/profile/profile", {
+        const res = await fetch(`${API_URL}/profile/profile`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +66,7 @@ const MySkills = () => {
   const handleSaveSkills = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:8080/profile/complete-profile", {
+      const res = await fetch(`${API_URL}/profile/complete-profile`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

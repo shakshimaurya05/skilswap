@@ -5,6 +5,7 @@ import Sidebar from "./sidebar";
 import Banner from "./banner";
 import Footer from "../layout/footer.jsx"
 import "./home.css";
+import API_URL from "../../config/api";
 
 import ProfileModal from "./ProfileModal";
 function Home() {
@@ -21,7 +22,7 @@ useEffect(() => {
     if (!userId || !token) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/matches/${userId}`, {
+      const res = await fetch(`${API_URL}/matches/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

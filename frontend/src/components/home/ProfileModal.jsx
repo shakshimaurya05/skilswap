@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
+import API_URL from "../../config/api";
 
 function ProfileModal({ selectedMatch, closeModal }) {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function ProfileModal({ selectedMatch, closeModal }) {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/chat/conversations", {
+      const res = await fetch(`${API_URL}/chat/conversations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./editProfile.css";
 import Header from "../home/Header";
+import API_URL from "../../config/api";
 const EditProfile = () => {
   const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ const EditProfile = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:8080/profile/profile", {
+        const res = await fetch(`${API_URL}/profile/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -53,7 +54,7 @@ const EditProfile = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:8080/profile/complete-profile",
+        `${API_URL}/profile/complete-profile`,
         {
           method: "POST",
           headers: {

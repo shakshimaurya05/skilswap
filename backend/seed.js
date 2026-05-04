@@ -254,8 +254,8 @@ async function seedDatabase() {
       console.log(`Created user: ${userData.name} (${userData.email})`);
     }
 
-    console.log(`\n✅ Successfully seeded ${users.length} users!`);
-    console.log('\n📋 LOGIN CREDENTIALS:');
+    console.log(`\n Successfully seeded ${users.length} users!`);
+    console.log('\n LOGIN CREDENTIALS:');
     console.log('All users have password: password123');
     console.log('\nUser List:');
     users.forEach((user, index) => {

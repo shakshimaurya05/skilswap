@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProfileModal from "./ProfileModal";
 import "./home.css";
 import Header from "./Header";
+import API_URL from "../../config/api";
 function DiscoverSkills() {
   const [skills, setSkills] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,7 +14,7 @@ function DiscoverSkills() {
     const fetchSkills = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:8080/api/skills", {
+        const res = await fetch(`${API_URL}/api/skills`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -30,7 +31,7 @@ function DiscoverSkills() {
     setSelectedSkill(skill);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:8080/api/skills/${skill}`, {
+      const res = await fetch(`${API_URL}/api/skills/${skill}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

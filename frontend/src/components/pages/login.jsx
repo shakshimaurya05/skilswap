@@ -4,6 +4,7 @@ import axios from "axios";
 import { handleError, handleSuccess } from "../../utils";
 import { ToastContainer,} from 'react-toastify';
 import "./login.css";
+import API_URL from "../../config/api";
 function Login() {
   const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({  
@@ -25,7 +26,7 @@ function Login() {
       return handleError(" email and password are required");
     }
     try {
-      const { data } = await axios.post("http://localhost:8080/auth/login", loginInfo);
+      const { data } = await axios.post(`${API_URL}/auth/login`, loginInfo);
        console.log(" FULL AXIOS RESPONSE:", data);
     console.log(" RESPONSE DATA:", data);
       const { success, message, error, jwtToken, name, _id} = data;

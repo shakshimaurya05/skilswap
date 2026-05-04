@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import "./home.css";
 import { motion } from "framer-motion";
 import Header from "./Header";
+import API_URL from "../../config/api";
 const Messages = () => {
   const [conversations, setConversations] = useState([]);
   const [selectedConversation, setSelectedConversation] = useState(null);
@@ -18,7 +19,7 @@ const Messages = () => {
 
   const fetchConversations = useCallback(async () => {
     try {
-      const res = await fetch("http://localhost:8080/chat/conversations", {
+      const res = await fetch(`${API_URL}/chat/conversations`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
@@ -32,7 +33,7 @@ const Messages = () => {
 
   const fetchMessages = useCallback(async (conversationId) => {
     try {
-      const res = await fetch(`http://localhost:8080/chat/conversations/${conversationId}/messages`, {
+      const res = await fetch(`${API_URL}/chat/conversations/${conversationId}/messages`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
@@ -66,7 +67,7 @@ const Messages = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8080/chat/conversations/${selectedConversation._id}/messages`, {
+      const res = await fetch(`${API_URL}/chat/conversations/${selectedConversation._id}/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
